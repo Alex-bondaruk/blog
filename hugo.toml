@@ -1,3 +1,58 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://example.com/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Blog about Hugo and Tailwind'
+theme = 'boilerplate'
+defaultContentLanguage = "en"
+
+# Output formats configuration
+[outputs]
+home = ["HTML", "RSS", "SITEMAP"]
+
+# Site parameters
+[params]
+description = "Blog about Hugo and Tailwind"
+author = "Oleksandr Bondaruk"
+mainSections = ["blog"]
+dateFormat = "January 2, 2006"
+
+[menus]
+[[menus.main]]
+identifier = "about"
+name = "Про нас"
+url = "/about/"
+weight = 10
+
+[[menus.main]]
+identifier = "blog"
+name = "Блог"
+url = "/blog/"
+weight = 20
+
+[markup]
+unsafe = true
+
+[taxonomies]
+services = "services"
+
+[languages]
+[languages.en]
+languageName = "English"
+title = 'Blog about Hugo and Tailwind'
+weight = 1
+contentDir = "content/en"
+baseURL = "https://example.com"
+bcp47Lang = "en-us"
+[languages.en.params]
+description = 'Blog about Hugo and Tailwind'
+flag = "🇺🇸"
+
+[languages.de]
+languageName = "Deutsch"
+title = "Deutsche Site Title"
+weight = 2
+contentDir = "content/de"
+baseURL = "https://example.de"
+bcp47Lang = "de"
+[languages.de.params]
+description = "Deutsche Seitenbeschreibung"
+flag = "🇩🇪"
